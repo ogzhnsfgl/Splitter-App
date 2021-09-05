@@ -1,3 +1,7 @@
+:root {
+  background-color: #c5e4e7;
+}
+
 * {
   font-family: "Space Mono", monospace;
   font-size: 24p;
@@ -13,6 +17,7 @@
   width: 80px;
   letter-spacing: 4px;
   line-height: 25px;
+  margin: 5rem 0;
 }
 
 .main-container {
@@ -29,14 +34,13 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
-  background-color: #c5e4e7;
+  height: 100%;
 }
 
 .main-container .card-component {
   margin-top: 2rem;
-  width: 700px;
-  max-width: 900px;
+  width: 100%;
+  max-width: 700px;
   height: 300px;
   border-radius: 10px;
   display: -webkit-box;
@@ -47,6 +51,17 @@
 
 .main-container .card-component > * {
   padding: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .main-container .card-component {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95vw;
+    height: 100%;
+  }
 }
 
 .card-left {
@@ -138,6 +153,14 @@
   border: 0px;
 }
 
+@media only screen and (max-width: 767px) {
+  .card-left .tip-buttons-container > button {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    margin: 0 5px 8px 0;
+  }
+}
+
 .card-left .tip-buttons-container button:last-child {
   background: #eaedf0;
   color: #00494d;
@@ -205,6 +228,21 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media only screen and (max-width: 767px) {
+  .card-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-height: 250px;
+  }
 }
 
 .card-right .row {
@@ -248,9 +286,12 @@ label {
 }
 
 .card-right button {
-  position: absolute;
-  bottom: 20px;
-  width: 290px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 0 10px;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
   background-color: #26c0ab;
   border: 1px solid #26c0ab;
   border-radius: 8px;

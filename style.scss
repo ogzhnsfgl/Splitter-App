@@ -1,5 +1,9 @@
 @import "variables";
 
+:root {
+  background-color: $bg-color;
+}
+
 * {
   font-family: "Space Mono", monospace;
   font-size: $font-size;
@@ -13,8 +17,8 @@
   word-wrap: break-word;
   width: 80px;
   letter-spacing: 4px;
-
   line-height: 25px;
+  margin: 5rem 0;
 }
 
 .main-container {
@@ -22,18 +26,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: $bg-color;
+  height: 100%;
+
   .card-component {
     margin-top: 2rem;
-    width: 700px;
-    max-width: 900px;
+    width: 100%;
+    max-width: 700px;
     height: 300px;
     border-radius: $border-radius;
     display: flex;
     background: $white;
     & > * {
       padding: 20px;
+    }
+
+    @include mq(phone, max) {
+      flex-direction: column;
+      width: 95vw;
+      height: 100%;
     }
   }
 }
@@ -81,6 +91,10 @@
       flex-basis: 80px;
       margin: 0 5px 8px 0;
       height: 35px;
+      @include mq(phone, max) {
+        flex-basis: 45%;
+        margin: 0 5px 8px 0;
+      }
 
       align-self: center;
       justify-self: center;
@@ -154,7 +168,13 @@ label {
   margin: 20px;
   border-radius: $border-radius;
   flex-direction: column;
+  align-items: baseline;
+  justify-content: space-around;
 
+  @include mq(phone, max) {
+    flex-direction: column;
+    max-height: 250px;
+  }
   & .row {
     display: flex;
     align-items: flex-end;
@@ -183,9 +203,12 @@ label {
     }
   }
   & button {
-    position: absolute;
-    bottom: 20px;
-    width: 290px;
+    align-self: flex-end;
+    padding: 0 10px;
+    margin-top: 10px;
+    text-align: center;
+
+    width: 100%;
     background-color: $strong-color;
     border: 1px solid $strong-color;
     border-radius: 8px;

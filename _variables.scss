@@ -10,3 +10,20 @@ $white: hsl(0, 0%, 100%);
 $font-size: 24p;
 
 $border-radius: 10px;
+
+$breakpoints: (
+  phone: 768px,
+  desktop: 1024px,
+) !default;
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}

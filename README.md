@@ -8,4 +8,4 @@ It's a challange from [@FrontendMentor](https://www.frontendmentor.io/challenges
 
 ## Soon
 
-- Responsive UI, JS part for functionality will be added.
+- ~~Responsive UI~~, JS part for functionality will be added. (Responsive UI added with second commit.)

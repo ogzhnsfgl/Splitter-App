@@ -4,8 +4,6 @@
 
 **Splitter** created pure JS and CSS/SCSS.
 
+Live demo available [here.](https://splitter-app-iota.vercel.app/)
+
 It's a challange from [@FrontendMentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX)
-
-## Soon
-
-- ~~Responsive UI~~, JS part for functionality will be added. (Responsive UI added with second commit.)

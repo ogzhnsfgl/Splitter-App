@@ -7,16 +7,15 @@
       content="width=device-width, initial-scale = 1.0,maximum-scale=1.0, user-scalable=no"
     />
     <!-- displays site properly based on user's device -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
-    </style>
+
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <script src="./js/index.js" defer></script>
 
     <title>Frontend Mentor | Tip calculator app</title>
 
@@ -31,43 +30,45 @@
         <div class="card-left">
           <div class="bill">
             <p>Bill</p>
-            <label class="dolar-label">
-              <input type="text" class="input-bill" />
-            </label>
+            <label class="dolar-label"> </label>
+            <input type="text" name="Bill Amount" class="input-bill" />
           </div>
           <div class="select-tips">
             <p>Select Tip %</p>
             <div class="tip-buttons-container">
-              <button>5%</button>
-              <button>10%</button>
-              <button>15%</button>
-              <button>25%</button>
-              <button>50%</button>
-              <button>Custom</button>
+              <button class="btn-5 btn-active">5</button>
+              <button class="btn-10">10</button>
+              <button class="btn-15">15</button>
+              <button class="btn-25">25</button>
+              <button class="btn-50">50</button>
+              <button class="btn-custom">
+                <span class="custom-text">Custom</span
+                ><input class="custom-input" type="text" name="custom" id="" />
+              </button>
             </div>
           </div>
           <div class="people">
             <p>Number of People</p>
             <label class="people-label">
-              <input type="text" class="input-people" />
+              <input type="text" class="input-people" value="1" />
             </label>
           </div>
         </div>
         <!-- Right side of card -->
-        <div class="card-right" class="input-people">
+        <div class="card-right input-people">
           <div class="row">
             <p>Tip Amount <span> / Person</span></p>
-            <p>$125.54</p>
+            <p class="tip-amount">$0.00</p>
           </div>
           <div class="row">
             <p>Total <span> / Person</span></p>
-            <p>$125.54</p>
+            <p class="total">$0.00</p>
           </div>
-          <button>Reset</button>
+          <button class="btn-reset">Reset</button>
         </div>
       </div>
     </div>
-    <!-- 
+    <!--
     Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
     person Total / person Reset -->
 

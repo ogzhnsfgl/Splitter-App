@@ -22,12 +22,12 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    <div class="main-container">
-      <p class="header">SPLITTER</p>
+    <div class="container">
+      <p class="container--header">SPLITTER</p>
       <!--Whole card inside this comp. -->
-      <div class="card-component">
+      <div class="container__cards">
         <!-- Left side of card -->
-        <div class="card-left">
+        <div class="card__left">
           <div class="bill">
             <p>Bill</p>
             <label class="dolar-label"> </label>
@@ -43,7 +43,12 @@
               <button class="btn-50">50</button>
               <button class="btn-custom">
                 <span class="custom-text">Custom</span
-                ><input class="custom-input" type="text" name="custom" id="" />
+                ><input
+                  class="custom-input"
+                  type="text"
+                  name="custom"
+                  autocomplete="off"
+                />
               </button>
             </div>
           </div>
@@ -55,7 +60,7 @@
           </div>
         </div>
         <!-- Right side of card -->
-        <div class="card-right input-people">
+        <div class="card__right">
           <div class="row">
             <p>Tip Amount <span> / Person</span></p>
             <p class="tip-amount">$0.00</p>

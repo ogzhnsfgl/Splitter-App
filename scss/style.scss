@@ -23,14 +23,24 @@
   margin: 5rem 0;
 }
 
-.main-container {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
 
-  .card-component {
+  &--header {
+    font-size: 20px;
+    color: $verydark;
+    word-wrap: break-word;
+    width: 80px;
+    letter-spacing: 4px;
+    line-height: 25px;
+    margin: 5rem 0;
+  }
+
+  &__cards {
     margin-top: 2rem;
     width: 100%;
     max-width: 700px;
@@ -50,7 +60,7 @@
   }
 }
 
-.card-left {
+.card__left {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -170,7 +180,7 @@ label {
   background-size: 8px;
 }
 
-.card-right {
+.card__right {
   display: flex;
   position: relative;
   background: $verydark;

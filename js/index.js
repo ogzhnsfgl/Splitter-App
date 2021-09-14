@@ -32,7 +32,8 @@ function calculateTip(e) {
 
     tipAmount.innerHTML = `$${resultTip}`;
     totalAmount.innerHTML = `$${(
-      parseFloat(billAmount.value) + parseFloat(resultTip)
+      (parseFloat(billAmount.value) + parseFloat(resultTip)) /
+      peopleNumber.value
     ).toFixed(2)}`;
   }
 }
@@ -41,7 +42,10 @@ function setTipRate(e) {
   btnColorChanger(e);
   if (
     e.target.innerHTML == "Custom" ||
-    e.target.classList.contains("custom-input")
+    e.target.classList.contains("custom-input") ||
+    e.target.classList.contains("custom-text") ||
+    e.target.classList.contains("custom-input") ||
+    e.target.classList.contains("btn-custom")
   ) {
     showCustomTipInput();
     if (btnCustomInput !== "") {
@@ -54,6 +58,7 @@ function setTipRate(e) {
     btnCustomInput.classList.remove("active");
     btnCustomText.classList.remove("hide");
     btnContainer.lastElementChild.classList.remove("btn-active");
+    btnColorChanger(e);
     if (parseInt(e.target.innerHTML)) {
       tipRate = e.target.innerHTML / 100;
       calculateTip();
@@ -68,7 +73,7 @@ function showCustomTipInput() {
     btnContainer.lastElementChild.classList.add("btn-active");
     btnCustomInput.classList.add("active");
     btnCustomText.classList.add("hide");
-    focus(btnCustomInput);
+    document.querySelector(".custom-input").focus();
   }
 }
 function customTipRateCalc(e) {

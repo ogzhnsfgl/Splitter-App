@@ -54,7 +54,7 @@
 
     @include screen(phone, max) {
       flex-direction: column;
-      width: 95vw;
+      width: 85vw;
       height: 100%;
     }
   }

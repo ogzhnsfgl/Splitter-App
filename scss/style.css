@@ -70,7 +70,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 95vw;
+    width: 85vw;
     height: 100%;
   }
 }
